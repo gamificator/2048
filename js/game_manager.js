@@ -160,10 +160,10 @@ GameManager.prototype.move = function (direction) {
           // Notify gf about event
           (function(value){
             var id = {
-              4:    '10b1c9bb-d672-4bd0-a9cf-5e3c9f3898e2',
-              8:    '1c5e2181-dee4-4d63-9027-c369c579e98d',
-              16:   '',
-              32:   '',
+              4:    'fb043bf0-2adb-4210-b620-09a8a23c9ac5',
+              8:    'ba00c3a0-f239-41b7-be8a-4dbb28e5d723',
+              16:   'c033515e-9d4c-4b3e-ac5b-be10d751309f',
+              32:   '71fc2f96-859f-42c8-9aa6-d9c37057e235',
               64:   '',
               128:  '',
               256:  '',
