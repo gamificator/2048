@@ -160,16 +160,8 @@ GameManager.prototype.move = function (direction) {
           // Notify gf about event
           (function(value){
             var id = {
-              4:    'fb043bf0-2adb-4210-b620-09a8a23c9ac5',
-              8:    'ba00c3a0-f239-41b7-be8a-4dbb28e5d723',
-              16:   'c033515e-9d4c-4b3e-ac5b-be10d751309f',
-              32:   '71fc2f96-859f-42c8-9aa6-d9c37057e235',
-              64:   '',
-              128:  '',
-              256:  '',
-              512:  '',
-              1024: '',
-              2048: ''
+              4:    'b6de595f-34d6-46c0-b87b-72f216130c85',
+              8:    'eb101e8a-edab-431f-8168-8a8f4614b70f'
             }[value];
             if (id) gf.increment(id);
           })(merged.value);
