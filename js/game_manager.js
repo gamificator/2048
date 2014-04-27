@@ -1,8 +1,9 @@
-function GameManager(size, InputManager, Actuator, StorageManager) {
+function GameManager(size, InputManager, Actuator, StorageManager, gf) {
   this.size           = size; // Size of the grid
   this.inputManager   = new InputManager;
   this.storageManager = new StorageManager;
   this.actuator       = new Actuator;
+  this.gf             = gf;
 
   this.startTiles     = 2;
 
@@ -155,6 +156,24 @@ GameManager.prototype.move = function (direction) {
         // Only one merger per row traversal?
         if (next && next.value === tile.value && !next.mergedFrom) {
           var merged = new Tile(positions.next, tile.value * 2);
+
+          // Notify gf about event
+          (function(value){
+            var id = {
+              4:    '10b1c9bb-d672-4bd0-a9cf-5e3c9f3898e2',
+              8:    '1c5e2181-dee4-4d63-9027-c369c579e98d',
+              16:   '',
+              32:   '',
+              64:   '',
+              128:  '',
+              256:  '',
+              512:  '',
+              1024: '',
+              2048: ''
+            }[value];
+            if (id) gf.increment(id);
+          })(merged.value);
+
           merged.mergedFrom = [tile, next];
 
           self.grid.insertTile(merged);

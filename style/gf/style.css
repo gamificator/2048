@@ -1,0 +1,26 @@
+.gf-achivement {
+	display: block;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	width: 500px;
+	height: 85px;
+	background-color: #eee4da;
+	z-index: 4;
+	border-bottom: 1px solid #8f7a66;
+}
+
+.gf-achivement h1 {
+	margin: 0;
+	padding: 0;
+	color: #445;
+	margin-left: 15px;
+	margin-top: 12px;
+}
+
+.gf-achivement p {
+	margin: 0;
+	padding: 0;
+	color: #445;
+	margin-left: 15px;
+}
