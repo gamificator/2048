@@ -157,7 +157,9 @@ GameManager.prototype.move = function (direction) {
         if (next && next.value === tile.value && !next.mergedFrom) {
           var merged = new Tile(positions.next, tile.value * 2);
 
-          gf.increment('merged', merged.value);
+          gf.increment('merged', {
+            'value': merged.value
+          });
 
           merged.mergedFrom = [tile, next];
 
